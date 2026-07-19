@@ -1,0 +1,138 @@
+body {
+
+background-color: indigo;
+font-family: "Times New Roman", Times, serif;
+margin: 0;
+padding: 20px;
+display: flex;
+flex-direction: column;
+min-height: 100vh;
+
+}
+
+h1, h2, h3 {
+
+color: #F2C94C;
+margin-bottom: 10px;
+
+} 
+p{ 
+
+color: white;
+margin-bottom: 15px;
+
+}
+
+a{ 
+
+color: aqua;
+text-decoration: underline;
+
+}
+
+a:hover{
+
+color: cyan;
+text-decoration: underline;
+}
+
+a:visited {
+
+color: green;
+text-decoration: underline;
+
+}
+
+img{
+
+max-width: 100%;
+height: auto;
+border: 4px solid white;
+padding: 5px;
+margin: 20px 0;
+
+}
+
+ul li{
+color: white;
+
+}
+
+ol li {
+color:white;
+
+}
+
+footer{
+background-color: #1a0033;
+color: white;
+text-align: center;
+padding: 15px;
+width: 100%;
+margin-top: auto;
+
+}
+
+footer a {
+color: aqua;
+
+margin: 0 10px;
+
+}
+
+footer nav ul {
+list-style-type: none;
+padding: 0;
+margin: 0; 
+
+}
+
+footer nav ul li{
+display: inline-block;
+margin: 0 15px;
+}
+
+.fa {
+padding: 20px;
+font-size: 30px;
+width: 50px;
+text-align: center;
+text-decoration: none;
+border-radius: 50%
+
+}
+
+.fa-youtube{
+background: red;
+color: white;
+}
+
+.fa-instagram{
+background: orange;
+color: white;
+}
+
+.gallery-container{
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+gap: 20px;
+padding: 20px;
+
+}
+
+.project-card {
+background-color: #1a0033;
+padding: 20px;
+border-radius: 10px
+border: 1px solid #F2C94C;
+}
+
+.project-card img {
+border: none;
+margin-top: 0;
+}
+
+form{
+color:white;
+}
+
