@@ -112,25 +112,7 @@ background: orange;
 color: white;
 }
 
-.gallery-container{
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-gap: 20px;
-padding: 20px;
 
-}
-
-.project-card {
-background-color: #1a0033;
-padding: 20px;
-border-radius: 10px;
-border: 1px solid #F2C94C;
-}
-
-.project-card img {
-border: none;
-margin-top: 0;
-}
 
 form{
 color:white;
