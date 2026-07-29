@@ -16,6 +16,21 @@
 
 <link rel = "stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+<style>
+
+	#contact-form {
+		display: flex;
+		flex-direction: column;
+		width: 300px;
+		margin: 0 auto;
+	}
+
+	h1, p, h3, .Link-card, .Github-card {
+		text-align: center;
+	}
+
+
+</style>
 
 </head>
 
@@ -25,7 +40,7 @@
 
 <p> Welcome to the Contact Section!! </p>
 
-<form>
+<form id="contact-form">
 	<label for="name">Name:</label><br>
 	<input type="text" id="name" name="name" required><br>
 	<label for ="email">Email:</label><br>
@@ -33,9 +48,9 @@
 	<label for="subject">Subject:</label><br>
 	<input type="text" id="subject" name="subject" required><br>
 	<label for="message">Message:</label><br>
-	<input type="text" id="message" name="message" required<br><br>
+	<textarea id="message" name="message" required></textarea><br><br>
 	<label for="send">Send:</label><br>
-	<input type="submit" id="send" name="send"<br>
+	<input type="submit" id="send" name="send"><br>
 	
 </form>
 
