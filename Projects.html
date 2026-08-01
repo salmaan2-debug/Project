@@ -17,56 +17,20 @@
 
 <script src="https://kit.fontawesome.com/4fd3632f56.js" crossorigin="anonymous"></script>
 
-<style> 
 
-.gallery-container{
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-gap: 20px;
-padding: 20px;
-
-}
-
-.project-card {
-background-color: #1a0033;
-padding: 20px;
-border-radius: 10px;
-border: 1px solid #F2C94C;
-}
-
-.project-card img {
-border: none;
-margin-top: 0;
-}
-</style>
 </head>
 
 <body>
+<script>
+	const savedTheme = localStorage.getItem('theme') || 'light';
+	document.body.setAttribute('data-theme', savedTheme);
+</script>
 <h1> Project Page </h1>
 
 <p> Welcome to the Projects Page! </p>
+<h2> <button id="theme-toggle"></button></h2>
 
 <main class="gallery-container">
-	<div class="project-card">
-		<a href="Technical_Document_2.pdf" download = "Technical_Doc_2.pdf">
-		<img src = "Tech_Doc.jpg" alt="Tech Doc" style="width:200px; height:auto;"> 
-		</a>
-	
-		<h3> Technical Document 2 </h3>
-	
-		<p> Did research on a real-world problem documented it and provided solutions for this problem using IT resources </p>
-	
-	</div>
-	
-	<div class = "project-card">
-		<a href="Final_Version_Film_Paper.pdf" download = "Film_Paper.pdf"><img src = "Film.jpg" alt = "Film logo" style="width:200px; height:auto;"> </a>
-		
-		<h3>Film Paper</h3>
-		
-		<p>Watched two superhero films and performed critical analysis of the two</p>
-		
-	</div>
-	
 	<div class = "project-card">
 		<a href="ITEC_3220_Assignment.pdf" download = "Assignment_1.pdf"><img src = "ER_Diagram.jpg" alt = "ER_Diagram logo" style = "width:200px; height:auto;"></a>
 		
@@ -89,7 +53,7 @@ margin-top: 0;
 
 
 <footer>
-<p>&copy;  2026 Salmaan. All Rights Reserved. </p>
+<p style="color: white;">&copy; 2026 Salmaan. All Rights Reserved.</p>
 <nav> 
 	<ul>
 		<li><a href="Homepage.html"> Homepage</a></li>
@@ -115,6 +79,7 @@ margin-top: 0;
 
 </footer>
 
+<script src="theme.js"></script>
 
 </body>
 

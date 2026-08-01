@@ -26,15 +26,20 @@
 		
 	}
 
+
 </style>
 
 </head>
 
 <body>
-
+<script>
+	const savedTheme = localStorage.getItem('theme') || 'light';
+	document.body.setAttribute('data-theme', savedTheme);
+</script>
 <h1> About Page </h1>
 
 <p> Welcome to the About Page! </p>
+<h2> <button id="theme-toggle"></button></h2>
 
 <h3> Biography</h3>
 <ul>
@@ -80,7 +85,8 @@
 </ul>
 
 <footer>
-<p>&copy;  2026 Salmaan. All Rights Reserved. </p>
+<p style="color: white;">&copy; 2026 Salmaan. All Rights Reserved.</p>
+
 <nav> 
 	<ul>
 		<li><a href="Homepage.html"> Homepage</a></li>
@@ -105,6 +111,7 @@
 
 </footer>
 
+<script src="theme.js"></script>
 </body>
 
 </html>

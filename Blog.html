@@ -18,16 +18,19 @@
 </head>
 
 <body>
-
+<script>
+	const savedTheme = localStorage.getItem('theme') || 'light';
+	document.body.setAttribute('data-theme', savedTheme);
+</script>
 <h1> Blog Page </h1>
-
+<h2> <button id="theme-toggle"></button></h2>
 <p> Welcome to the Blog Section!! </p>
 
 <div id="Blog-list"></div>
 
 
 <footer>
-<p>&copy;  2026 Salmaan. All Rights Reserved. </p>
+<p style="color: white;">&copy; 2026 Salmaan. All Rights Reserved.</p>
 <nav> 
 	<ul>
 		<li><a href="Homepage.html"> Homepage</a></li>
@@ -53,6 +56,7 @@
 
 </footer>
 
+<script src="theme.js"></script>
 
 </body>
 
