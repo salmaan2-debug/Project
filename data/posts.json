@@ -1,0 +1,45 @@
+[
+  {
+    "id": 1,
+    "title": "Part 1 Blog Post",
+    "date": "2026-07-31",
+    "summary": "I made a theme toggle feature for my website. I encountered some challenges and learned a few things along the way.",
+    "category": "Phase 2",
+    "content": "This feature switches between dark mode and light mode with the user clicking the button to switch between the two. I approached by following the template initially and then adding in other pieces that were needed through research via the internet. For example, I needed to make a button so the code provided in the template would work properly. Challenges I encountered: finding a way to represent the current theme while also ensuring the button is still visible; ensuring that once the dark theme or light theme was added the other elements on the page were visible; preventing the flashing of the wrong theme during transition from one page to another. What I learned: the CSS I used in the theme folder was lower precedence compared to the external folder CSS, so if I wanted a consistent theme that varies by current theme I needed the theme folder to determine that. Another thing I learned was that the theme of the page should be set at the top so it renders right away, instead of waiting for script execution."
+  }
+
+  , 
+  
+  {
+    "id": 2,
+    "title": "Part 2 Blog Post",
+    "date": "2026-08-01",
+    "summary": "I made a feature that dynamically loads the header and footer. I encountered a few challenges and learned a few things along the way.",
+    "category": "Phase 2",
+    "content": "This feature dynamically loads the header and footer of the page. I approached this by creating a component.js file that contains the code to load the header and footer. I then included this script in each HTML file where I wanted the header and footer to be loaded. Challenges I encountered: ensuring that the header and footer were loaded correctly on each page; making sure that the styles for the header and footer were applied correctly; dealing with any potential conflicts between the header/footer styles and the page styles. What I learned: how to use JavaScript to dynamically load content into a webpage; how to structure my code to make it reusable across multiple pages; how to troubleshoot issues related to dynamic content loading."
+
+  }
+
+  ,
+
+  {
+    "id":3,
+    "title": "Part 3 Blog Post",
+    "date": "2026-08-02",
+    "summary": "I made a feature that dynamically loads the blog posts. I encountered a few challenges and learned a few things along the way.",
+    "category": "Phase 2",
+    "content": "This feature dynamically loads the blog posts from a JSON file. I approached this by following the template provided and added my theme toggle code. Challenges I encountered: ensuring that the blog posts were being shown on the page; ensuring that the read more link was visible in both light and dark modes; dealing with any potential conflicts between the blog post styles and the page styles. What I learned: I learnt that using hyphens for date will result in Javascript using UTC midnight by default, I also learnt how to sort objects in descending order by date"
+
+  }
+  ,
+
+  {
+    "id":4,
+    "title": "Part 4 Blog Post",
+    "date": "2026-08-03",
+    "summary": "TBD",
+    "category": "Phase 2",
+    "content": "TBD"
+  }
+
+]
