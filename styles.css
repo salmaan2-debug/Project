@@ -43,7 +43,23 @@
 
     p, a, li, ul, ol, form, input, button {
         color: var(--text-color);
-    }   
+    }
+
+    .read-more-button {
+        color: black;
+    }
+
+    
+
+    .hidden {
+        display: none;
+    }
+    
+    .badge{
+        background-color: red;
+        padding: 5px 10px;
+        border-radius: 5px;
+    }
 
 
 body {
@@ -94,6 +110,7 @@ margin: 20px 0;
 }
 
 footer{
+display: block;
 background-color: #1a0033;
 color: white;
 text-align: center;
