@@ -61,6 +61,8 @@
         border-radius: 5px;
     }
 
+   
+
 
 body {
 
@@ -161,10 +163,17 @@ color: white;
 
 
 
-form{
-color: var(--text-color);
+form input, form textarea {
+    color: black;
+    background-color: white;
+    border: 1px solid #333;
 }
 
+form input[type="submit"] {
+    color: black;
+    background-color: #f2f2f2;
+    border: 1px solid #888;
+}
 .social-media-links-container{
 display: flex;
 flex-direction: row;
@@ -206,5 +215,22 @@ border: 1px solid red;
 .project-card img {
 border: none;
 margin-top: 0;
+}
+
+.error-message{
+    color: #cc0000;
+    background-color: #fff0f0;
+    border: 1px solid #ffcccc;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    margin-top: 5px;
+    display: inline-block;
+    font-weight: bold;
+}
+
+.error-message::before {
+    content: "⚠️ ";
+    margin-right: 5px;
 }
 
