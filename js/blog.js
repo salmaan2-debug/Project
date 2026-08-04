@@ -1,10 +1,12 @@
+// Blog page script: loads posts from JSON, renders cards, and attaches read-more behavior.
 document.addEventListener('DOMContentLoaded', function() {
     const blogList = document.getElementById('Blog-list');
 
     fetch('data/posts.json')
         .then(response => response.json())
         .then(posts => {
-            posts.sort((a, b) => new Date(b.date) - new Date(a.date)); // Sort posts by date in descending order
+            // Sort posts by date so the newest post appears first.
+            posts.sort((a, b) => new Date(b.date) - new Date(a.date));
             posts.forEach((post, index) => {
                 const postElement = document.createElement('div');
                 postElement.classList.add('post-card');
@@ -34,7 +36,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 });
             });
 
-            setupFilter(); // Call the setupFilter function after loading the posts
+            // Activate the page filter after the posts are rendered.
+            setupFilter();
         })
         .catch(error => console.error('Error loading blog posts:', error));
 });

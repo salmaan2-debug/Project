@@ -1,3 +1,4 @@
+// Component loader script. Dynamically loads header and footer partials into pages.
 function loadComponent(selector, filePath) {
     fetch(filePath)
         .then(response => {
@@ -9,6 +10,7 @@ function loadComponent(selector, filePath) {
         .then(html => {
             document.querySelector(selector).innerHTML = html;
             if (selector === '#header-placeholder') {
+                // After the header is loaded, restore the saved theme and wire up the theme toggle.
                 const savedTheme = localStorage.getItem('theme') || 'light';
                 document.body.setAttribute('data-theme', savedTheme);
 
@@ -31,7 +33,7 @@ function loadComponent(selector, filePath) {
         .catch(error => console.error('Error loading component:', error));
 }
 
-
+// Load header and footer components when the page is ready.
 document.addEventListener('DOMContentLoaded', function() {
     loadComponent('#header-placeholder', 'components/header.html');
     loadComponent('#footer-placeholder', 'components/footer.html');

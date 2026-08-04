@@ -1,6 +1,6 @@
 <!DOCTYPE html> 
 
-<!-- Skeleton Page -->
+<!-- Contact page: includes a custom validated contact form and social media links. -->
 
 <html lang = "en" >
 
@@ -52,6 +52,7 @@
 <p> Welcome to the Contact Section!! </p>
 
 <form id="contact-form" novalidate>
+	<!-- The validation script adds inline error messages directly under each field. -->
 	<label for="name">Name:</label><br>
 	<input type="text" id="name" name="name" required><br>
 	<label for ="email">Email:</label><br>
@@ -85,6 +86,7 @@
 
 <div id="footer-placeholder"></div>
 
+<!-- Load shared components, then theme handling and form validation. -->
 <script src="js/component.js"></script> 
 <script src="js/theme.js"></script>
 <script src="js/validate.js"></script>

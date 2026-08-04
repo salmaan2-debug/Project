@@ -1,6 +1,6 @@
 <!DOCTYPE html> 
 
-<!-- Skeleton Page -->
+<!-- Blog page: renders posts from data/posts.json and provides live filtering. -->
 
 <html lang = "en" >
 
@@ -24,6 +24,7 @@
 </script>
 <h1> Blog Page </h1>
 <p> Welcome to the Blog Section!! </p>
+<!-- Header loads dynamically and includes the theme switcher button. -->
 <div id="header-placeholder"></div>
 <div class = "search-bar">
 	<input type="text" id="filter-input" placeholder="Filter posts..." style="color:black">
@@ -38,6 +39,7 @@
 
 <div id="footer-placeholder"></div>
 
+<!-- Load shared header/footer components after placeholder elements are present. -->
 <script src="js/component.js"></script>
 
 </body>

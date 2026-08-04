@@ -1,168 +1,163 @@
+/* Enable view transitions where supported for smoother page navigation. */
 @view-transition{
     navigation: auto;
-    
 }
 
- :root{
-        --bg-color: #ffffff;
-        --text-color: #111111;
-        transition: background-color 0.1s, color 0.1s;
-    }
+/* Global theme variables: light and dark themes are controlled by the body data-theme attribute. */
+:root{
+    --bg-color: #ffffff;
+    --text-color: #111111;
+    transition: background-color 0.1s, color 0.1s;
+}
 
-    [data-theme="light"] {
-        --bg-color: #ffffff;
-        --text-color: #111111;
-        transition: background-color 0.1s, color 0.1s;
-    }
+[data-theme="light"] {
+    --bg-color: #ffffff;
+    --text-color: #111111;
+    transition: background-color 0.1s, color 0.1s;
+}
 
-    [data-theme="dark"] {
-        --bg-color: #111111;
-        --text-color: #ffffff;
-        transition: background-color 0.1s, color 0.1s;
-    }
+[data-theme="dark"] {
+    --bg-color: #111111;
+    --text-color: #ffffff;
+    transition: background-color 0.1s, color 0.1s;
+}
 
-    body{
-        background-color: var(--bg-color);
-        color: var(--text-color);
-    }
+/* Base page colors use the current theme variables. */
+body{
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
 
-    #theme-toggle {
-        position: fixed;
-        top: 10px;
-        right: 10px;
-        z-index: 1000;
-        background-color: gray;
+/* Theme toggle button appears in the fixed header area on all pages. */
+#theme-toggle {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 1000;
+    background-color: gray;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+}
 
-        width: 40px;
-        height: 40px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: background-color 0.3;
-    }
+/* Ensure text elements follow the current theme color. */
+p, a, li, ul, ol, form, input, button {
+    color: var(--text-color);
+}
 
-    p, a, li, ul, ol, form, input, button {
-        color: var(--text-color);
-    }
+/* Read more buttons keep a consistent button label color. */
+.read-more-button {
+    color: black;
+}
 
-    .read-more-button {
-        color: black;
-    }
+/* Utility classes. */
+.hidden {
+    display: none;
+}
 
-    
-
-    .hidden {
-        display: none;
-    }
-    
-    .badge{
-        background-color: red;
-        padding: 5px 10px;
-        border-radius: 5px;
-    }
+/* Badge styling for highlighting latest posts or featured items. */
+.badge{
+    background-color: red;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
 
    
 
 
+/* Page structure and typography. */
 body {
-
-font-family: "Times New Roman", Times, serif;
-margin: 0;
-padding: 20px;
-display: flex;
-flex-direction: column;
-min-height: 100vh;
-
+    font-family: "Times New Roman", Times, serif;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
+/* Headings use a bright accent color for visibility. */
 h1, h2, h3 {
+    color: #F2C94C;
+    margin-bottom: 10px;
+}
 
-color: #F2C94C;
-margin-bottom: 10px;
-
-} 
-a{ 
-
-color: aqua;
-text-decoration: underline;
-
+/* Link styles for readability and hover feedback. */
+a{
+    color: aqua;
+    text-decoration: underline;
 }
 
 a:hover{
-
-color: cyan;
-text-decoration: underline;
+    color: cyan;
+    text-decoration: underline;
 }
 
 a:visited {
-
-color: green;
-text-decoration: underline;
-
+    color: green;
+    text-decoration: underline;
 }
 
+/* Responsive image styling with consistent framing. */
 img{
-
-max-width: 100%;
-height: auto;
-border: 4px grey solid;
-padding: 5px;
-margin: 20px 0;
-
+    max-width: 100%;
+    height: auto;
+    border: 4px grey solid;
+    padding: 5px;
+    margin: 20px 0;
 }
 
+/* Footer layout and background color for page bottom. */
 footer{
-display: block;
-background-color: #1a0033;
-color: white;
-text-align: center;
-padding: 15px;
-width: 100%;
-margin-top: auto;
-
+    display: block;
+    background-color: #1a0033;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    width: 100%;
+    margin-top: auto;
 }
 
 footer a {
-color: aqua;
-
-margin: 0 10px;
-
+    color: aqua;
+    margin: 0 10px;
 }
 
+/* Footer nav uses inline links for compact layout. */
 footer nav ul {
-list-style-type: none;
-padding: 0;
-margin: 0; 
-
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
 
 footer nav ul li{
-display: inline-block;
-margin: 0 15px;
+    display: inline-block;
+    margin: 0 15px;
 }
 
+/* Social icon styling for the footer buttons. */
 .fa {
-padding: 20px;
-font-size: 30px;
-width: 50px;
-text-align: center;
-text-decoration: none;
-border-radius: 50%
-
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
 }
 
 .fa-youtube{
-background: red;
-color: white;
+    background: red;
+    color: white;
 }
 
 .fa-instagram{
-background: orange;
-color: white;
+    background: orange;
+    color: white;
 }
 
-
-
+/* Form field appearance for the contact page. */
 form input, form textarea {
     color: black;
     background-color: white;
@@ -174,49 +169,52 @@ form input[type="submit"] {
     background-color: #f2f2f2;
     border: 1px solid #888;
 }
-.social-media-links-container{
-display: flex;
-flex-direction: row;
-gap : 20px;
-justify-content: center;
 
+/* Layout for social media link cards on the contact page. */
+.social-media-links-container{
+    display: flex;
+    flex-direction: row;
+    gap : 20px;
+    justify-content: center;
 }
 
+/* Card styling currently targets tag names but should likely use class selectors. */
 Link-card{
-font-size: 24px;
-text-decoration: none;
+    font-size: 24px;
+    text-decoration: none;
 }
 
 Github-card{
-font-size: 24px;
-text-decoration: none;
+    font-size: 24px;
+    text-decoration: none;
 }
 
+/* Project gallery grid for responsive project cards. */
 .gallery-container{
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-gap: 20px;
-padding: 20px;
-
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
 }
 
+/* Dark project cards with highlighted text. */
 .project-card p {
-	color:white;
+    color:white;
 }
 
 .project-card {
-background-color: #1a0033;
-padding: 20px;
-border-radius: 10px;
-border: 1px solid red;
-
+    background-color: #1a0033;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid red;
 }
 
 .project-card img {
-border: none;
-margin-top: 0;
+    border: none;
+    margin-top: 0;
 }
 
+/* Inline validation error styles used by the contact form script. */
 .error-message{
     color: #cc0000;
     background-color: #fff0f0;

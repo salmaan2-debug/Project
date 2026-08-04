@@ -1,6 +1,8 @@
+// Contact form validation script. Handles inline errors, email validation, and success display.
 document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('contact-form');
 
+    // Create or return the inline error element directly below the field.
     function getErrorElement(fieldId) {
         const field = document.getElementById(fieldId);
         let errorElement = field.nextElementSibling;
@@ -21,6 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
         errorElement.style.display = 'block';
     }
 
+    // Hide the inline error message for a field.
     function clearError(fieldId) {
         const errorElement = getErrorElement(fieldId);
         errorElement.textContent = '';
@@ -70,19 +73,18 @@ document.addEventListener('DOMContentLoaded', function() {
             isValid = false;
         }
 
-        // If all validations pass, show success message
+        // If all validations pass, replace the form with a visible success message.
         if (isValid) {
-
-        form.innerHTML = `
-            <div class="success-message">
-                <h3>Thank you, ${name}!</h3>
-                <p>Your message has been successfully sent. We will get back to you shortly.</p>
-            </div> `;
+            form.innerHTML = `
+                <div class="success-message">
+                    <h3>Thank you, ${name}!</h3>
+                    <p>Your message has been successfully sent. We will get back to you shortly.</p>
+                </div>`;
         }
     });
 
+    // Clear the error message when the user updates a field.
     ['name', 'email', 'message'].forEach(function (fieldId) {
-        const field = document.getElementById(fieldId);
         document.getElementById(fieldId).addEventListener('input', function() {
             clearError(fieldId);
         });

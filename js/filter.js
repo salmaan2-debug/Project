@@ -1,15 +1,18 @@
 
+// Live filter script: filters visible cards on the page as the user types.
 function setupFilter() {
-
     const filterInput = document.getElementById('filter-input');
     const noResults = document.getElementById('no-results');
 
+    // Exit early when there is no search input on the current page.
     if (!filterInput) {
         return;
     }
 
+    // Search both project cards and blog post cards when present.
     const cards = document.querySelectorAll('.project-card, .post-card');
 
+    // Update the visible cards whenever the user types in the search field.
     filterInput.addEventListener('input', function() {
         const query = filterInput.value.toLowerCase().trim();
         let visibleCount = 0;
@@ -32,7 +35,7 @@ function setupFilter() {
             noResults.style.display = 'none';
         }
     });
+}
 
-};
-
+// Start filter setup immediately so the search works on load.
 setupFilter();
