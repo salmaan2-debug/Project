@@ -75,16 +75,18 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // If all validations pass, replace the form with a visible success message.
         if (isValid) {
-            form.innerHTML = `
-                <div class="success-message">
-                    <h3>Thank you, ${name}!</h3>
-                    <p>Your message has been successfully sent. We will get back to you shortly.</p>
-                </div>`;
+
+        form.innerHTML = `
+            <div class="success-message">
+                <h3>Thank you, ${name}!</h3>
+                <p>Your message has been successfully sent. We will get back to you shortly.</p>
+            </div> `;
         }
     });
 
     // Clear the error message when the user updates a field.
     ['name', 'email', 'message'].forEach(function (fieldId) {
+        const field = document.getElementById(fieldId);
         document.getElementById(fieldId).addEventListener('input', function() {
             clearError(fieldId);
         });

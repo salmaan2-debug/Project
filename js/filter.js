@@ -1,6 +1,7 @@
 
 // Live filter script: filters visible cards on the page as the user types.
 function setupFilter() {
+
     const filterInput = document.getElementById('filter-input');
     const noResults = document.getElementById('no-results');
 
@@ -35,7 +36,8 @@ function setupFilter() {
             noResults.style.display = 'none';
         }
     });
-}
+
+};
 
 // Start filter setup immediately so the search works on load.
 setupFilter();
