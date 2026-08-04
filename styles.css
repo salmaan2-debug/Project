@@ -11,13 +11,13 @@
 }
 
 [data-theme="light"] {
-    --bg-color: #ffffff;
+    --bg-color: #f3e5f5;;
     --text-color: #111111;
     transition: background-color 0.1s, color 0.1s;
 }
 
 [data-theme="dark"] {
-    --bg-color: #111111;
+    --bg-color: #1a0033;
     --text-color: #ffffff;
     transition: background-color 0.1s, color 0.1s;
 }
@@ -72,7 +72,7 @@ p, a, li, ul, ol, form, input, button {
 body {
     font-family: "Times New Roman", Times, serif;
     margin: 0;
-    padding: 20px;
+    padding: 10px;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
