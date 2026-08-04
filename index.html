@@ -1,12 +1,12 @@
 <!DOCTYPE html> 
 
-<!-- Index page: site navigation hub linking to the main sections. -->
+<!-- Home page: welcome screen and links to the main site sections. -->
 
 <html lang = "en" >
 
 <head>
 
-<title> Index Section </title>
+<title> Home Page Section </title>
 
 <meta charset = "utf-8" />
 
@@ -14,26 +14,30 @@
 
 <link rel="stylesheet"  href="styles.css">
 
+<script src="https://kit.fontawesome.com/4fd3632f56.js" crossorigin="anonymous"></script>
+
 </head>
 
 <body>
-<!-- Main site navigation for the static pages. -->
-<nav> 
-	<ul>
-		<li><a href="About.html"> About</a></li>
-		<li><a href="Resume.html">Resume</a></li>
-		<li><a href="Projects.html">Projects</a></li>
-		<li><a href="Blog.html">Blog</a></li>
-		<li><a href="Contact.html">Contact</a></li>
-		
-	</ul>
-	
-</nav>
+<script>
+	const savedTheme = localStorage.getItem('theme') || 'light';
+	document.body.setAttribute('data-theme', savedTheme);
+</script>
 
-<h1> Index Placeholder </h1>
+<h1> Home Page </h1>
 
-<p> Welcome to the Index section!!! </p>
+<p> Welcome to my Home Page!!! </p>
+<!-- Header loads here so that the theme button and navigation are consistent across pages. -->
+<div id="header-placeholder"></div>
 
+<p>My name is Salmaan Shekabdurahman, <br> I was born in December 20, 2003 and have a passion in sports and anime. </p>
+
+<img src="Selfie.jpg" alt="Picture of myself" style="width:450px; height:450px;">
+
+<div id="footer-placeholder"></div>
+
+<!-- Shared header/footer component loader. -->
+<script src="js/component.js"></script>
 </body>
 
 </html>
