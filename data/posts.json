@@ -3,32 +3,20 @@
     "id": 1,
     "title": "Part 1 Blog Post",
     "date": "2026-07-31",
-    "summary": "I made a theme toggle feature for my website. I encountered some challenges and learned a few things along the way.",
+    "summary": "I made a feature that allows to toggle between light and dark mode with a button click for my website. I encountered some challenges and learned a few things along the way.",
     "category": "Phase 2",
-    "content": "This feature switches between dark mode and light mode with the user clicking the button to switch between the two.\nI approached by following the template initially and then adding in other pieces that were needed through research via the internet.\nFor example, I needed to make a button so the code provided in the template would work properly.\nChallenges I encountered: finding a way to represent the current theme while also ensuring the button is still visible; ensuring that once the dark theme or light theme was added the other elements on the page were visible; preventing the flashing of the wrong theme during transition from one page to another.\nWhat I learned: the CSS I used in the theme folder was lower precedence compared to the external folder CSS, so if I wanted a consistent theme that varies by current theme I needed the theme folder to determine that.\nAnother thing I learned was that the theme of the page should be set at the top so it renders right away, instead of waiting for script execution."
-  }
+    "content": "Feature Description: This feature allows users to toggle between light and dark mode with a button click, using localStorage to remember the user's preference. It ensures the selected theme persists across different pages and through browser refreshes.\n\nMy approach: I followed the template and implemented a toggle button that updates the data-theme attribute on the body element. I structured the CSS using variables for backgrounds and text colors, allowing the entire site to react instantly when the data-theme attribute changed.\n\nChallenges I encountered: one major challenge was representing the current theme on the button while ensuring it was visible in both modes. In addition, the default light mode briefly appeared before my script could apply the saved dark theme, so I also needed to ensure that all elements remained visible in both modes.\n\nLessons learned: I learned that to prevent the flashing issue, the theme-check script should be placed at the top of the page so it executes before the rest of the page renders. I also learned more about CSS precedence: if an external stylesheet has higher specificity, it can override theme-specific styles, so using global variables is a much more robust approach."
 
+  }
   , 
   
-  {
-    "id": 2,
-    "title": "Part 2 Blog Post",
-    "date": "2026-08-01",
-    "summary": "I made a feature that dynamically loads the header and footer. I encountered a few challenges and learned a few things along the way.",
-    "category": "Phase 2",
-    "content": "This feature dynamically loads the header and footer of the page.\nI approached this by creating a component.js file that contains the code to load the header and footer.\nI then included this script in each HTML file where I wanted the header and footer to be loaded.\nChallenges I encountered: ensuring that the header and footer were loaded correctly on each page; making sure that the styles for the header and footer were applied correctly; dealing with any potential conflicts between the header/footer styles and the page styles.\nWhat I learned: how to use JavaScript to dynamically load content into a webpage; how to structure my code to make it reusable across multiple pages; how to troubleshoot issues related to dynamic content loading."
-
-  }
-
-  ,
-
   {
     "id":3,
     "title": "Part 3 Blog Post",
     "date": "2026-08-02",
     "summary": "I made a feature that dynamically loads the blog posts. I encountered a few challenges and learned a few things along the way.",
     "category": "Phase 2",
-    "content": "This feature dynamically loads the blog posts from a JSON file.\nI approached this by following the template provided and added my theme toggle code.\nChallenges I encountered: ensuring that the blog posts were being shown on the page; ensuring that the read more link was visible in both light and dark modes; dealing with any potential conflicts between the blog post styles and the page styles.\nWhat I learned: I learnt that using hyphens for date will result in JavaScript using UTC midnight by default, and I also learnt how to sort objects in descending order by date."
+    "content": "Feature Description: This feature replaces hard-coded HTML with a dynamic system that fetches and displays blog posts from an external posts.json file.\n\nMy approach: I followed the template using the Fetch API to retrieve the post data and handle the response by converting it into a JSON array. I then used a forEach loop to create post cards dynamically, using innerHTML to populate them with the title, summary, and category before adding them to the DOM.\n\nChallenges encountered: one challenge was integrating the theme switcher and making sure the read more buttons and full content were visible in both modes. I also struggled with the Date object; initially the dates displayed on the site were off by one day because of how JavaScript handles hyphens in date strings.\n\nLessons learned: I learned that using hyphens in a date string can cause JavaScript to default to UTC midnight, which shifts the date depending on the user's timezone. I also learned how to use a custom compare function with new Date() to sort the posts in descending order, ensuring the Latest Post always appears first."
 
   }
   ,
@@ -37,9 +25,21 @@
     "id": 4,
     "title": "Part 4 Blog Post",
     "date": "2026-08-03",
-    "summary": "I made a feature that validates the inputs sent by the user in the contact form. I encountered a few challenges and learned a few things along the way.",
+    "summary": "I made a feature that adds real-time client-side validation to my contact form. I encountered a few challenges and learned a few things along the way.",
     "category": "Phase 2",
-    "content": "This feature validates the form as the client fills out, providing clear actionable feedback as they try to fill out the form.\nI approached it by following the template and searching up any gaps in my understanding on the internet to get a better understanding, like for example an inline error message and what that looked like exactly so I could see if I had done it correctly.\nChallenges encountered: - Input text is not visible during dark mode - Showing an inline error for the message box - Showing a success message after form was validated.\nWhat I learnt: Having a generic CSS text color for the form will cause problems down the line so it is important to ensure it is set in a future-proof manner.\nWhat an inline error message box looks like and how to make one."
+    "content": "Feature Description: This feature adds real-time client-side validation to my contact form, providing clear and actionable feedback. It ensures that the required inputs are present and in the correct format before allowing submission.\n\nMy approach: I followed the template and intercepted the form's submit event using event.preventDefault() to handle validation without reloading the page. I used a regex pattern to verify the email format and created a reusable showError function to dynamically inject div elements for inline feedback. Once the inputs are validated, I replace the form with a success message using innerHTML.\n\nChallenges encountered: One major challenge was the dark mode visibility issue, where input text became hard to see against the background. Another challenge was making the message box errors look consistent with the other inline errors. I had to use custom CSS to ensure all inline errors appeared as styled boxes rather than just plain red text.\n\nLessons learned: I learned that using generic CSS colors is not future proof; it's better to use variables that adapt to theme changes. I also gained a better understanding of DOM hierarchy by using nextElementSibling to place error messages exactly underneath the textboxes."
+  
+  }
+
+  ,
+
+  {
+    "id": 5,
+    "title": "Part 5 Blog Post",
+    "date": "2026-08-04",
+    "summary": "I made a feature that adds a live search to my website, allowing users to find projects or blog posts instantly without reloading the page. I encountered a few challenges and learned a few things along the way.",
+    "category": "Phase 2",
+    "content": "Feature description: This feature adds a live search to my website, allowing users to find projects or blog posts instantly without reloading the page. It provides a better user experience by matching search terms against multiple fields such as titles and categories.\n\nMy approach: I followed the template and created an event listener to respond as the user types. My code scans all cards on the page, converts the text to lowercase to remove case sensitivity issues, and it uses display, hide, or show logic to adjust cards based on the query. I structured the code into a reusable setupFilter() function so it could be used on multiple pages.\n\nChallenges I encountered: the biggest hurdle was the dynamic content trap. Initially the filter worked on my Projects page fine but failed on the Blog page because the posts were loaded dynamically from a JSON file. Since the posts did not exist when the page first loaded, the filter could not see them and could not filter the posts.\n\nLessons learned: I learned that DOMContentLoaded is not sufficient for content added to the DOM after a fetch call. Scripts need to be placed after the elements they target actually exist. I also learned the importance of using a single, reusable function that can be manually called after dynamic data has finished rendering."
   }
 
 ]

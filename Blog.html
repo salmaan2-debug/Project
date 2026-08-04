@@ -25,9 +25,15 @@
 <h1> Blog Page </h1>
 <p> Welcome to the Blog Section!! </p>
 <div id="header-placeholder"></div>
-
+<div class = "search-bar">
+	<input type="text" id="filter-input" placeholder="Filter posts..." style="color:black">
+	<div id="no-results" class="error-message" style="display: none;">
+		No posts found.
+	</div>
+</div>
 <div id="Blog-list"></div>
 
+<script src="js/filter.js"></script>
 <script src="js/blog.js"></script>
 
 <div id="footer-placeholder"></div>

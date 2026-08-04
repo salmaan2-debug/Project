@@ -33,6 +33,8 @@ document.addEventListener('DOMContentLoaded', function() {
                     readMoreButton.textContent = isHidden ? 'Read More' : 'Hide';
                 });
             });
+
+            setupFilter(); // Call the setupFilter function after loading the posts
         })
         .catch(error => console.error('Error loading blog posts:', error));
 });
